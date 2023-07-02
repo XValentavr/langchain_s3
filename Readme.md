@@ -11,8 +11,8 @@
 6. Make sure that you have files in S3 bucket
 
 ## Endpoint specification
-1. /s3 - fetch PDF document from S3 bucket using boto3 client and unstructured library to process document
-2. / - fetch PDF document from S3 bucket using langchain logic
+1. http://langchain-s3-lb-370537755.us-east-1.elb.amazonaws.com/s3 - fetch PDF document from S3 bucket using boto3 client and unstructured library to process document
+2. http://langchain-s3-lb-370537755.us-east-1.elb.amazonaws.com/ - fetch PDF document from S3 bucket using langchain logic
 
 ## Dependencies
 
@@ -24,3 +24,7 @@
 - All dependencies are in requirements.txt file
 ## Notes
 1. S3 bucket has no public access
+## Features
+1. Used Fargate to deploy code
+2. Added Load Balancer
+3. Used AWS CodeBuild and AWS CodePipeline to push the latest version of master branch
