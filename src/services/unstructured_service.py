@@ -59,7 +59,7 @@ class UnstructuredService:
         :param prefix: prefix to filter unnecessary documents
         :return: Document which have been found in S3
         """
-        bucket = self.__s3.Bucket(os.getenv("AWS_S3_BUCKET_NAME"))
+        bucket = self.__s3.Bucket(creds.AWS_S3_BUCKET_NAME)
         for s3_object in bucket.objects.filter(Prefix=prefix):
             return self.__base_service.retrieve_from_s3_and_handle_unstructured(s3_object.key)
 
