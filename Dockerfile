@@ -26,4 +26,4 @@ COPY . /app
 WORKDIR /app/src
 
 EXPOSE 5000
-CMD ["python", "application.py"]
+CMD ["python", "app.py"]
